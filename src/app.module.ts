@@ -3,11 +3,15 @@ import { ConfigModule, ConfigService } from '@nestjs/config'
 import { AppController } from './app.controller'
 import { AppService } from './app.service'
 import { Configuration } from './config/config.keys'
+import { DatabaseModule } from './database/database.module'
 
 @Module({
-  imports: [ConfigModule.forRoot({
-    isGlobal: true
-  })],
+  imports: [
+    ConfigModule.forRoot({
+      isGlobal: true
+    }),
+    DatabaseModule
+  ],
   controllers: [AppController],
   providers: [AppService]
 })
