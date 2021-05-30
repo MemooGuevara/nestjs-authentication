@@ -1,0 +1,9 @@
+{
+  "type": "postgres",
+  "url": "postgres://test:test@localhost/test",
+  "entities": ["src/**/**/**/*.entity{.ts,.js}"],
+  "migrations": ["src/database/migrations/*{.ts,.js}"],
+  "cli": {
+      "migrationsDir": "src/database/migrations"
+  }
+}
